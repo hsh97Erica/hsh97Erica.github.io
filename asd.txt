@@ -1,0 +1,37 @@
+﻿import numpy as np
+def printphase(num):
+  print("\n==phase "+str(num)+"==")
+print(np.random.randint(10,size=10));print(np.random.randint(1,size=10))
+printphase(2);A = np.random.randint(10,size=(2,4));B = np.random.randint(2,size=(3,3));AB = [];AB.append(A);AB.append(B)
+for which in AB:
+  for row in which:print(row)
+printphase(3);print(np.random.randint(5,10,size=(2,4)))
+printphase(4);del A;A=np.array([1,2,3]);print(A)
+printphase(5);del A;A=np.array([[1,2,3],[4,5,6]])
+for row in A:print(row)  
+printphase(6);del B;B=np.array([[0,1,2],[3,4,5]]);C= A+B;print("C mat")
+for row in C:print(row)
+printphase(7);del A,B,C;A=np.matrix("1 2 3;4 5 6");B=np.matrix("0 1 2;3 4 5");C=A+B;
+for row in C:print(row)
+D=A-B
+for row in D:print(row)
+printphase(8);A=np.matrix("1 2 3;4 5 6");C=np.matrix("0 1;2 3;4 5");E=A*C
+for row in E:print(row)
+printphase(9);A=np.matrix("1 2 3;4 5 6;7 8 9");E=A.transpose()
+for row in E:print(row)
+from numpy.linalg import inv
+printphase(10);a=np.matrix("1 2;3 4");a=inv(a)
+for row in a:print(row)
+printphase(11);print(np.arange(3));print(np.arange(3,7,0.1));
+import matplotlib.pyplot as plt
+printphase(12);plt.plot([1,2,3,4],[4,5,6,7]);plt.axis([0,5,0,10]);plt.show();plt.cla();
+printphase(13);t=np.arange(0.0,2.0,0.01);s=np.sin(2*np.pi*t);plt.plot(t,s);plt.show();
+from numpy.random import normal,rand
+printphase(14);x=normal(size=200);plt.hist(x,bins=30);plt.show();plt.cla();
+printphase(15);a=rand(100);b=rand(100);plt.scatter(a,b);plt.show();
+printphase("assignment");
+printphase("matrix calc");MATS=[np.random.randint(10000,size=(2,2)),np.random.randint(10000,size=(2,2))];
+for mat in MATS:print(mat.transpose());print(inv(mat));
+printphase("ass plot");t=np.arange(0.0,10.0,10/1000);c=np.cos(2*np.pi*t);s=np.sin(2*np.pi*t);plt.plot(t,s);plt.plot(t,c);plt.show();plt.cla();
+#printphase("ass histogram");x=normal(size=1000);plt.hist(x,bins=30);plt.show();plt.cla();
+#printphase("ass scatter plot");a=rand(1000);b=rand(1000);plt.scatter(a,b);plt.show();
